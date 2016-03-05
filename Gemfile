@@ -49,3 +49,6 @@ end
 
 # Bootstrap - Sass
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# Font Awesome
+gem "font-awesome-rails"
