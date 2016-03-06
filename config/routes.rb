@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :projects do 
     resources :rewards, only: [:new, :create, :edit, :update, :destroy]
     resources :pledges
+    resources :payments, only: [:new, :create]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
