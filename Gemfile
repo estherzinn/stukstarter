@@ -76,3 +76,6 @@ gem 'momentjs-rails'
 
 # Figaro
 gem 'figaro'
+
+# Braintree
+gem 'braintree'

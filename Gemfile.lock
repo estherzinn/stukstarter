@@ -69,6 +69,8 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    braintree (2.58.0)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (8.2.2)
     coffee-rails (4.1.1)
@@ -199,6 +201,7 @@ DEPENDENCIES
   annotate!
   bootstrap-sass (~> 3.3.6)
   bootstrap-wysihtml5-rails!
+  braintree
   byebug
   coffee-rails (~> 4.1.0)
   date_validator
