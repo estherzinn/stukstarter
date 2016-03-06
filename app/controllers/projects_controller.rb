@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
+  
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   def index
     @projects = Project.all
@@ -55,7 +57,7 @@ class ProjectsController < ApplicationController
   private
 
     def set_project
-      @project = Project.find(params[:id])
+      @project = Project.friendly.find(params[:id])
     end
 
     def project_params

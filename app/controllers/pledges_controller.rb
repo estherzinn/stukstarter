@@ -5,6 +5,7 @@ class PledgesController < ApplicationController
   before_action :set_reward
 
   def index
+    authorize! :manage, @project
     @pledges = @project.pledges
     respond_to do |format|
       format.html 
@@ -22,7 +23,7 @@ class PledgesController < ApplicationController
   private
 
     def set_project
-      @project = Project.find(params[:project_id])
+      @project = Project.friendly.find(params[:project_id])
     end
 
     def set_reward

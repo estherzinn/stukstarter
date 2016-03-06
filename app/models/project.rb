@@ -17,6 +17,9 @@
 
 class Project < ActiveRecord::Base
 
+  extend FriendlyId
+  friendly_id :slug_candidates, use: :slugged
+
   belongs_to :user
   has_many :rewards
 
@@ -70,6 +73,13 @@ class Project < ActiveRecord::Base
 
     def charge_backers_if_funded
       ChargeBackersJob.set(wait_until: self.expiration_date).perform_later self.id
+    end
+
+    def slug_candidates
+      [
+        :name,
+        [:name, :created_at]
+      ]
     end
 
 end

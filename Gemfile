@@ -85,3 +85,9 @@ gem 'delayed_job_active_record'
 
 # Delayed Job Web
 gem 'delayed_job_web'
+
+# Friendly ID
+gem 'friendly_id', '~> 5.1.0'
+
+# Cancancan
+gem 'cancancan', '~> 1.10'
