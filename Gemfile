@@ -80,6 +80,7 @@ group :development do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'sqlite3'
 end
 
 group :production do
